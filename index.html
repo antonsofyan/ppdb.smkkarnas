@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPMB SMK Karnas Kuningan - Official Website</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <style>
+        .swiper-button-next, .swiper-button-prev {
+            color: #2950a7;
+            background: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .swiper-button-next:after, .swiper-button-prev:after {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #2950a7;
+        }
+
+        .swiper-button-next, .swiper-button-prev {
+            color: #dc2626;
+            background: white;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1px solid #f3f4f6;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .swiper-button-next:after, .swiper-button-prev:after {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .swiper-button-next:hover, .swiper-button-prev:hover {
+            background-color: #dc2626;
+            color: white;
+            border-color: #dc2626;
+            box-shadow: 0 10px 15px -3px rgba(220, 38, 38, 0.3);
+            transform: scale(1.1);
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #dc2626 !important;
+        }
+
+        .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            transition: all 0.3s;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            DEFAULT: '#2950a7',
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            500: '#3b82f6',
+                            600: '#2950a7',
+                            700: '#1e3a8a',
+                            900: '#111827',
+                        },
+                        secondary: {
+                            DEFAULT: '#F44336',
+                            50: '#fef2f2',
+                            100: '#fee2e2',
+                            600: '#d32f2f',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body.glightbox-open {
+            overflow: hidden !important;
+            height: 100vh !important;
+        }
+
+        .glightbox-container {
+            overflow: hidden !important;
+            z-index: 99999 !important;
+        }
+
+        .gslide-image img {
+            max-height: 90vh !important;
+            width: auto !important;
+            max-width: 95vw !important;
+            object-fit: contain !important;
+            margin: auto !important;
+        }
+
+        .goverlay {
+            background: rgba(0, 0, 0, 0.92) !important;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-600 antialiased bg-white">
+
+<nav class="fixed w-full z-50 bg-primary-600/95 backdrop-blur-md border-b-2 border-secondary transition-all duration-300 shadow-lg shadow-primary-900/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+
+            <div class="flex items-center gap-3">
+                <div>
+                    <h1 class="font-bold text-white leading-none text-lg">SPMB SMK Karnas Kuningan</h1>
+                </div>
+            </div>
+
+            <div class="hidden md:flex space-x-10 text-sm font-semibold text-primary-100">
+                <a href="#home" class="hover:text-white transition relative group py-2">
+                    Beranda
+                    <span class="absolute bottom-0 left-0 w-0 h-1 bg-secondary rounded-full transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#profile" class="hover:text-white transition relative group py-2">
+                    Profil
+                    <span class="absolute bottom-0 left-0 w-0 h-1 bg-secondary rounded-full transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#check" class="hover:text-white transition relative group py-2">
+                    Cek Status Seleksi
+                    <span class="absolute bottom-0 left-0 w-0 h-1 bg-secondary rounded-full transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#promotion" class="hover:text-white transition relative group py-2">
+                    Promo
+                    <span class="absolute bottom-0 left-0 w-0 h-1 bg-secondary rounded-full transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#schedule" class="hover:text-white transition relative group py-2">
+                    Informasi Pendaftaran
+                    <span class="absolute bottom-0 left-0 w-0 h-1 bg-secondary rounded-full transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#photo-gallery" class="hover:text-white transition relative group py-2">
+                    Kenali Sekolah
+                    <span class="absolute bottom-0 left-0 w-0 h-1 bg-secondary rounded-full transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#data-privacy-policy" class="hover:text-white transition relative group py-2">
+                    Kebijakan Privasi Data
+                    <span class="absolute bottom-0 left-0 w-0 h-1 bg-secondary rounded-full transition-all group-hover:w-full"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section id="home" class="pt-36 pb-24 lg:pt-44 lg:pb-32 overflow-hidden relative bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+
+        <img src="./assets/img/logo.png"
+             alt="Logo SMK Karnas"
+             class="h-24 md:h-32 mx-auto mb-8 mix-blend-multiply object-contain">
+
+        <span class="inline-block py-1.5 px-4 rounded-full bg-secondary/10 text-secondary font-bold text-xs tracking-wider mb-8 border border-secondary/20">Be Professional and Entrepreneurship</span>
+
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-primary-900 tracking-tight mb-8 leading-tight">
+            Raih Masa Depan Gemilang <br>
+            Bersama <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary">SMK Karnas Kuningan</span>
+        </h1>
+
+        <p class="max-w-2xl mx-auto text-lg md:text-xl text-gray-600 mb-12 leading-relaxed font-medium">
+            Penerimaan Murid Baru Tahun Ajaran 2026 telah dibuka. Kami menyiapkan generasi profesional yang cerdas, kompeten, dan religius
+        </p>
+
+        <div class="flex flex-col sm:flex-row justify-center gap-5">
+            <a href="#" class="px-8 py-4 bg-primary-600 text-white font-bold rounded-full hover:bg-primary-700 transition shadow-xl shadow-primary-600/20 border-2 border-transparent uppercase">Daftar
+                Sekarang</a>
+            <a href="#cek-hasil" class="px-8 py-4 bg-white text-primary-600 font-bold rounded-full hover:bg-primary-50 transition border-2 border-primary-100 shadow-sm uppercase">Login</a>
+        </div>
+    </div>
+
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-primary-100/60 rounded-full blur-3xl -z-10 opacity-70 mix-blend-multiply"></div>
+</section>
+
+<section id="profile" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="max-w-4xl mx-auto text-center mb-16">
+            <span class="text-secondary font-bold tracking-wider uppercase text-sm mb-2 block">Profil & Komitmen</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-primary-600 mb-8">SMK Karnas Kuningan</h2>
+            <p class="text-gray-600 text-lg leading-relaxed text-justify md:text-center">
+                Sekolah yang berkomitmen membekali siswa-siswinya dalam ilmu-ilmu sesuai dengan program studi, serta kemampuan di bidang <span class="text-primary-600 font-semibold">teknologi, informasi, bahasa inggris, entrepreneur</span>
+                dan kepribadian yang unggul. Kami terus berinovasi untuk menghasilkan lulusan yang memiliki kualifikasi tinggi dengan masa tunggu pendek, yaitu segera memperoleh pekerjaan yang
+                berkualitas ataupun berwiraswasta setelah lulus nanti.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                <div class="w-14 h-14 bg-primary-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-600 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary-600 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Kompeten</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Lulusan yang sudah memiliki keahlian spesifik dan sertifikasi kompetensi sesuai standar industri.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                <div class="w-14 h-14 bg-primary-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-600 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary-600 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Profesional</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Membentuk karakter santun, beretika, mampu beradaptasi, dan mau bekerja keras.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                <div class="w-14 h-14 bg-primary-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-600 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary-600 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Berkarakter</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Menjadi pribadi yang Sholeh, Mandiri, dan Kreatif dalam menghadapi tantangan zaman.
+                </p>
+            </div>
+
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group">
+                <div class="w-14 h-14 bg-primary-50 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-600 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary-600 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M12 14l9-5-9-5-9 5 9 5z"/>
+                        <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-800 mb-3">Akademis</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Memiliki bekal ilmu yang cukup untuk bisa melanjutkan kuliah ke jenjang yang lebih tinggi.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="check" class="py-16 bg-white relative z-20 -mt-12">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="bg-slate-50 rounded-3xl p-8 md:p-12 text-center shadow-[0_20px_50px_rgba(41,_80,_167,_0.08)] border border-primary-80">
+            <h3 class="text-2xl font-bold text-primary-600 mb-3">Cek Status Seleksi</h3>
+            <p class="text-gray-500 mb-8">Lengkapi data di bawah ini untuk melihat status seleksi.</p>
+
+            <form class="max-w-2xl mx-auto flex flex-col gap-4">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" inputmode="numeric" placeholder="NIK / No. KITAS" required
+                           class="w-full px-6 py-4 rounded-full border-2 border-gray-100 focus:border-primary-500 focus:ring-4 focus:ring-primary-100 outline-none transition font-medium text-gray-700 placeholder:text-gray-400">
+
+                    <div class="relative">
+                        <input type="date" required
+                               class="w-full px-6 py-4 rounded-full border-2 border-gray-100 focus:border-primary-500 focus:ring-4 focus:ring-primary-100 outline-none transition font-medium text-gray-700 placeholder:text-gray-400">
+                        <span class="absolute -top-2.5 left-6 bg-white px-2 text-xs font-bold text-primary-600">Tanggal Lahir</span>
+                    </div>
+                </div>
+
+                <button type="submit"
+                        class="w-full px-8 py-4 bg-secondary hover:bg-secondary-600 text-white font-bold rounded-full transition shadow-lg shadow-secondary/30 flex items-center justify-center gap-2 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                    </svg>
+                    Cari Data
+                </button>
+
+            </form>
+        </div>
+    </div>
+</section>
+
+<section id="promotion" class="py-24 bg-slate-50 relative overflow-hidden">
+    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-primary-50 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-red-50 rounded-full blur-3xl opacity-50 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        <div class="text-center mb-16 max-w-3xl mx-auto">
+            <span class="inline-block py-1 px-3 rounded bg-red-100 text-secondary text-xs font-bold tracking-widest uppercase mb-4">Limited Offer</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-primary-600 mb-4">Program Promo SPMB 2026/2027</h2>
+            <p class="text-gray-600 text-lg">
+                Manfaatkan kesempatan emas ini! Kami menyediakan berbagai keringanan biaya bagi pendaftar awal, keluarga besar, dan siswa berprestasi.
+            </p>
+        </div>
+
+        <div class="mb-12">
+            <div class="bg-gradient-to-r from-primary-600 to-primary-800 rounded-3xl p-8 md:p-12 shadow-2xl shadow-primary-900/20 text-white flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden group">
+                <div class="absolute right-0 top-0 h-full w-1/2 bg-white/5 skew-x-12 translate-x-20"></div>
+
+                <div class="relative z-10">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="flex h-3 w-3 relative">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-600 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+                        </span>
+                        <span class="font-bold text-secondary-100 tracking-wide uppercase text-sm">Promo Terbatas</span>
+                    </div>
+                    <h3 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">100 Pendaftar Pertama</h3>
+                    <p class="text-primary-100 text-lg md:text-xl max-w-2xl">
+                        Dapatkan fasilitas <span class="font-bold text-white bg-secondary/80 px-2 rounded">Bebas SPP selama 3 Bulan</span>. Segera daftarkan diri Anda sebelum kuota terpenuhi!
+                    </p>
+                </div>
+
+                <div class="relative z-10 shrink-0">
+                    <a href="#jalur"
+                       class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-primary-700 transition-all duration-200 bg-white rounded-full shadow-lg hover:bg-secondary hover:text-white hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary">
+                        Daftar Sekarang
+                        <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                                  clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8">
+
+            <div class="space-y-6">
+                <h3 class="text-xl font-bold text-gray-800 flex items-center gap-2 mb-6">
+                    <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                    Keluarga Besar & Afiliasi
+                </h3>
+
+                <div class="flex flex-col sm:flex-row items-start sm:items-center bg-white border border-gray-200 p-6 rounded-2xl hover:border-primary-200 hover:shadow-lg transition-all duration-300">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-lg text-gray-900">Guru / Pegawai SMK Karnas</h4>
+                        <p class="text-gray-500 text-sm mt-1">Putra/Putri dari Guru atau Staf Pegawai.</p>
+                    </div>
+                    <div class="mt-4 sm:mt-0 sm:ml-4 bg-white border border-primary-100 px-4 py-2 rounded-xl text-center shadow-sm shrink-0">
+                        <span class="block text-xs text-gray-500 uppercase tracking-wide">Potongan SPP</span>
+                        <span class="block text-xl font-extrabold text-primary-600">50%</span>
+                        <span class="block text-[10px] text-gray-400 font-medium">1 Semester</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-start sm:items-center bg-white border border-gray-200 p-6 rounded-2xl hover:border-primary-200 hover:shadow-lg transition-all duration-300">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-lg text-gray-900">Siswa Kembar</h4>
+                        <p class="text-gray-500 text-sm mt-1">Berlaku jika mendaftar bersamaan di tahun yang sama.</p>
+                    </div>
+                    <div class="mt-4 sm:mt-0 sm:ml-4 bg-white border border-primary-100 px-4 py-2 rounded-xl text-center shadow-sm shrink-0">
+                        <span class="block text-xs text-gray-500 uppercase tracking-wide">Potongan SPP</span>
+                        <span class="block text-xl font-extrabold text-primary-600">25%</span>
+                        <span class="block text-[10px] text-gray-400 font-medium">Selama 3 Tahun</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-start sm:items-center bg-white border border-gray-200 p-6 rounded-2xl hover:border-primary-200 hover:shadow-lg transition-all duration-300">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-lg text-gray-900">Siswa Adik - Kakak</h4>
+                        <p class="text-gray-500 text-sm mt-1">Memiliki saudara kandung yang aktif bersekolah di sini.</p>
+                    </div>
+                    <div class="mt-4 sm:mt-0 sm:ml-4 bg-white border border-primary-100 px-4 py-2 rounded-xl text-center shadow-sm shrink-0">
+                        <span class="block text-xs text-gray-500 uppercase tracking-wide">Potongan SPP</span>
+                        <span class="block text-xl font-extrabold text-primary-600">25%</span>
+                        <span class="block text-[10px] text-gray-400 font-medium">Selama 1 Tahun</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <h3 class="text-xl font-bold text-gray-800 flex items-center gap-2 mb-6">
+                    <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                    </svg>
+                    Apresiasi Siswa Berprestasi
+                </h3>
+
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="group relative overflow-hidden bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all duration-300">
+                        <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-yellow-500 group-hover:w-2 transition-all"></div>
+                        <div class="flex justify-between items-center pl-4">
+                            <div>
+                                <h4 class="font-bold text-gray-900">Tingkat Kabupaten</h4>
+                                <p class="text-xs text-gray-500 mt-1 uppercase tracking-wider">Minimal Juara 3</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-sm text-gray-500">Bebas SPP</span>
+                                <span class="block text-2xl font-bold text-yellow-600">3 Bulan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all duration-300">
+                        <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-blue-400 group-hover:w-2 transition-all"></div>
+                        <div class="flex justify-between items-center pl-4">
+                            <div>
+                                <h4 class="font-bold text-gray-900">Tingkat Provinsi</h4>
+                                <p class="text-xs text-gray-500 mt-1 uppercase tracking-wider">Minimal Juara 3</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-sm text-gray-500">Bebas SPP</span>
+                                <span class="block text-2xl font-bold text-blue-500">4 Bulan</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group relative overflow-hidden bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-all duration-300">
+                        <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary group-hover:w-2 transition-all"></div>
+                        <div class="flex justify-between items-center pl-4">
+                            <div>
+                                <h4 class="font-bold text-gray-900">Tingkat Nasional</h4>
+                                <p class="text-xs text-gray-500 mt-1 uppercase tracking-wider">Minimal Juara Harapan</p>
+                            </div>
+                            <div class="text-right">
+                                <span class="block text-sm text-gray-500">Bebas SPP</span>
+                                <span class="block text-2xl font-bold text-secondary">5 Bulan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-xs text-gray-400 italic mt-4 pl-2">*Syarat dan ketentuan berlaku. Sertifikat kejuaraan wajib dilampirkan.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="schedule" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <span class="h-1.5 w-24 bg-secondary mx-auto block rounded-full mb-6"></span>
+            <h2 class="text-3xl md:text-4xl font-bold text-primary-600">Jadwal Pelaksanaan</h2>
+            <p class="text-gray-600 mt-4 text-lg">Catat tanggal penting gelombang pendaftaran.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-white p-8 rounded-3xl shadow-xl shadow-primary-100/50 border-2 border-primary-500 relative overflow-hidden group transition-transform hover:-translate-y-1">
+                <div class="absolute top-0 right-0 bg-secondary text-white text-[11px] font-bold px-4 py-2 rounded-bl-2xl uppercase tracking-wider">Sedang Buka</div>
+                <div class="text-primary-600 font-bold text-xl mb-2">Gelombang 1</div>
+                <div class="text-3xl font-extrabold text-gray-900 mb-4">01 Sep - 31 Des</div>
+                <p class="font-medium text-gray-500">Tahun 2025</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 opacity-75 hover:opacity-100 hover:border-primary-200 transition-all">
+                <div class="text-gray-400 font-bold text-xl mb-2">Gelombang 2</div>
+                <div class="text-3xl font-bold text-gray-900 mb-4">02 Jan - 28 Feb</div>
+                <p class="font-medium text-gray-500">Tahun 2026</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 opacity-75 hover:opacity-100 hover:border-primary-200 transition-all">
+                <div class="text-gray-400 font-bold text-xl mb-2">Gelombang 3</div>
+                <div class="text-3xl font-bold text-gray-900 mb-4">01 Mar - 31 Mei</div>
+                <p class="font-medium text-gray-500">Tahun 2026</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 opacity-75 hover:opacity-100 hover:border-primary-200 transition-all">
+                <div class="text-gray-400 font-bold text-xl mb-2">Gelombang 4</div>
+                <div class="text-3xl font-bold text-gray-900 mb-4">01 Jun - 11 Jul</div>
+                <p class="font-medium text-gray-500">Tahun 2026</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24 pt-16 border-t border-gray-100">
+        <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+
+            <div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-gray-100">
+                <h2 class="text-3xl font-bold text-primary-600 mb-10 border-b-4 border-secondary/20 pb-4 inline-block">Dokumen Persyaratan</h2>
+                <ul class="space-y-6">
+                    <li class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center text-primary-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-lg">Fotocopy Kartu Keluarga</h4>
+                            <p class="text-gray-500 text-sm mt-1">Digunakan untuk verifikasi data identitas dan hubungan keluarga calon peserta didik.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center text-primary-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-lg">Fotocopy KTP Orang Tua</h4>
+                            <p class="text-gray-500 text-sm mt-1">Sebagai bukti identitas orang tua atau wali yang bertanggung jawab secara administratif.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center text-primary-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-lg">Fotocopy Ijazah SMP/MTS</h4>
+                            <p class="text-gray-500 text-sm mt-1">Sebagai bukti kelulusan dari jenjang pendidikan sebelumnya (dapat menyusul jika belum tersedia).</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center text-primary-600">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-900 text-lg">Upload KIP/PKH</h4>
+                            <p class="text-gray-500 text-sm mt-1">Sebagai bukti kepesertaan calon peserta didik dalam program bantuan pendidikan pemerintah (Jika Ada).</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="pt-4">
+                <h2 class="text-3xl font-bold text-primary-600 mb-12 border-b-4 border-secondary/20 pb-4 inline-block">Alur Pendaftaran Online</h2>
+
+                <div class="relative ml-8 border-l-2 border-primary-200 space-y-12">
+
+                    <div class="relative">
+                        <div class="absolute -left-[25px] top-0 bg-primary-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg ring-8 ring-slate-50 shadow-sm z-10">
+                            1
+                        </div>
+                        <div class="pl-10 pt-1">
+                            <h4 class="text-xl font-bold text-gray-900">Pembuatan Akun & Login</h4>
+                            <p class="text-gray-600 mt-2 text-sm leading-relaxed">
+                                Buat akun pendaftaran, kemudian <strong>Login</strong> menggunakan <strong>NIK</strong> sebagai username dan <strong>Tanggal Lahir</strong> (format: YYYY-MM-DD) sebagai
+                                kata sandi default.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -left-[25px] top-0 bg-white border-2 border-primary-600 text-primary-600 w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg ring-8 ring-slate-50 shadow-sm z-10">
+                            2
+                        </div>
+                        <div class="pl-10 pt-1">
+                            <h4 class="text-xl font-bold text-gray-900">Pilih Konsentrasi Keahlian</h4>
+                            <p class="text-gray-600 mt-2 text-sm leading-relaxed">
+                                Pilih dua kompetensi keahlian sesuai minat. <strong>Pilihan ke-2</strong> berfungsi sebagai alternatif otomatis apabila tidak lolos seleksi pada konsentrasi pilihan
+                                pertama.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -left-[25px] top-0 bg-white border-2 border-primary-600 text-primary-600 w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg ring-8 ring-slate-50 shadow-sm z-10">
+                            3
+                        </div>
+                        <div class="pl-10 pt-1">
+                            <h4 class="text-xl font-bold text-gray-900">Lengkapi Biodata Diri</h4>
+                            <p class="text-gray-600 mt-2 text-sm leading-relaxed">
+                                Isi formulir data secara lengkap dan benar, meliputi:
+                                <span class="block mt-1 text-gray-500 text-xs font-medium bg-gray-100 p-2 rounded border border-gray-200">
+                                    Data Pribadi &bull; Asal Sekolah &bull; Alamat &bull; Data Ayah/Ibu/Wali &bull; Kontak
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -left-[25px] top-0 bg-white border-2 border-primary-600 text-primary-600 w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg ring-8 ring-slate-50 shadow-sm z-10">
+                            4
+                        </div>
+                        <div class="pl-10 pt-1">
+                            <h4 class="text-xl font-bold text-gray-900">Unggah Dokumen Persyaratan</h4>
+                            <p class="text-gray-600 mt-2 text-sm leading-relaxed">
+                                Upload hasil scan dokumen asli berikut: Kartu Keluarga (KK), Akta Kelahiran, KTP Orang Tua, dan KIP/PKH (jika ada).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -left-[25px] top-0 bg-white border-2 border-primary-600 text-primary-600 w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg ring-8 ring-slate-50 shadow-sm z-10">
+                            5
+                        </div>
+                        <div class="pl-10 pt-1">
+                            <h4 class="text-xl font-bold text-gray-900">Data Referensi</h4>
+                            <p class="text-gray-600 mt-2 text-sm leading-relaxed">
+                                Masukkan data kerabat, guru, atau pihak yang merekomendasikan/membantu proses pendaftaran Anda (Opsional).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -left-[25px] top-0 bg-secondary text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg ring-8 ring-red-50 shadow-sm z-10">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </div>
+                        <div class="pl-10 pt-1">
+                            <h4 class="text-xl font-bold text-gray-900">Finalisasi Data</h4>
+                            <p class="text-gray-600 mt-2 text-sm leading-relaxed">
+                                Cek kembali seluruh isian. Klik <strong>Finalisasi</strong> untuk mengunci data secara permanen.
+                                <span class="block mt-1 text-red-500 text-xs italic">*Data yang sudah difinalisasi tidak dapat diubah kembali.</span>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="photo-gallery" class="py-24 bg-slate-50 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <span class="h-1.5 w-24 bg-secondary mx-auto block rounded-full mb-6"></span>
+            <h2 class="text-3xl md:text-4xl font-bold text-primary-600">Kenali Sekolah Pilihanmu</h2>
+            <p class="text-gray-600 mt-4 text-lg">Kumpulan brosur digital yang membantu kamu mengenal jurusan, kegiatan seru, dan peluang masa depan sebelum bergabung bersama kami.</p>
+        </div>
+
+        <div class="swiper mySwiper !pb-12 !px-4">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="group relative h-64 md:h-80 lg:h-96 w-full bg-white p-3 border border-gray-300 shadow-lg hover:shadow-2xl hover:border-primary-500 transition-all duration-300">
+                        <a href="./assets/img/0001.jpg" class="glightbox block w-full h-full cursor-zoom-in overflow-hidden relative bg-gray-50">
+                            <img src="./assets/img/0001.jpg" alt="Galeri 1" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="group relative h-64 md:h-80 lg:h-96 w-full bg-white p-3 border border-gray-300 shadow-lg hover:shadow-2xl hover:border-primary-500 transition-all duration-300">
+                        <a href="./assets/img/0002.jpg" class="glightbox block w-full h-full cursor-zoom-in overflow-hidden relative bg-gray-50">
+                            <img src="./assets/img/0002.jpg" alt="Galeri 2" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="group relative h-64 md:h-80 lg:h-96 w-full bg-white p-3 border border-gray-300 shadow-lg hover:shadow-2xl hover:border-primary-500 transition-all duration-300">
+                        <a href="./assets/img/0003.jpg" class="glightbox block w-full h-full cursor-zoom-in overflow-hidden relative bg-gray-50">
+                            <img src="./assets/img/0003.jpg" alt="Galeri 3" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="group relative h-64 md:h-80 lg:h-96 w-full bg-white p-3 border border-gray-300 shadow-lg hover:shadow-2xl hover:border-primary-500 transition-all duration-300">
+                        <a href="./assets/img/0004.jpg" class="glightbox block w-full h-full cursor-zoom-in overflow-hidden relative bg-gray-50">
+                            <img src="./assets/img/0004.jpg" alt="Galeri 4" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="group relative h-64 md:h-80 lg:h-96 w-full bg-white p-3 border border-gray-300 shadow-lg hover:shadow-2xl hover:border-primary-500 transition-all duration-300">
+                        <a href="./assets/img/0005.jpg" class="glightbox block w-full h-full cursor-zoom-in overflow-hidden relative bg-gray-50">
+                            <img src="./assets/img/0005.jpg" alt="Galeri 5" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="group relative h-64 md:h-80 lg:h-96 w-full bg-white p-3 border border-gray-300 shadow-lg hover:shadow-2xl hover:border-primary-500 transition-all duration-300">
+                        <a href="./assets/img/0006.jpg" class="glightbox block w-full h-full cursor-zoom-in overflow-hidden relative bg-gray-50">
+                            <img src="./assets/img/0006.jpg" alt="Galeri 6" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="group relative h-64 md:h-80 lg:h-96 w-full bg-white p-3 border border-gray-300 shadow-lg hover:shadow-2xl hover:border-primary-500 transition-all duration-300">
+                        <a href="./assets/img/0007.jpg" class="glightbox block w-full h-full cursor-zoom-in overflow-hidden relative bg-gray-50">
+                            <img src="./assets/img/0007.jpg" alt="Galeri 7" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="group relative h-64 md:h-80 lg:h-96 w-full bg-white p-3 border border-gray-300 shadow-lg hover:shadow-2xl hover:border-primary-500 transition-all duration-300">
+                        <a href="./assets/img/0008.jpg" class="glightbox block w-full h-full cursor-zoom-in overflow-hidden relative bg-gray-50">
+                            <img src="./assets/img/0008.jpg" alt="Galeri 8" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="group relative h-64 md:h-80 lg:h-96 w-full bg-white p-3 border border-gray-300 shadow-lg hover:shadow-2xl hover:border-primary-500 transition-all duration-300">
+                        <a href="./assets/img/0009.jpg" class="glightbox block w-full h-full cursor-zoom-in overflow-hidden relative bg-gray-50">
+                            <img src="./assets/img/0009.jpg" alt="Galeri 8" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="group relative h-64 md:h-80 lg:h-96 w-full bg-white p-3 border border-gray-300 shadow-lg hover:shadow-2xl hover:border-primary-500 transition-all duration-300">
+                        <a href="./assets/img/0010.jpg" class="glightbox block w-full h-full cursor-zoom-in overflow-hidden relative bg-gray-50">
+                            <img src="./assets/img/0010.jpg" alt="Galeri 8" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="group relative h-64 md:h-80 lg:h-96 w-full bg-white p-3 border border-gray-300 shadow-lg hover:shadow-2xl hover:border-primary-500 transition-all duration-300">
+                        <a href="./assets/img/0011.jpg" class="glightbox block w-full h-full cursor-zoom-in overflow-hidden relative bg-gray-50">
+                            <img src="./assets/img/0011.jpg" alt="Galeri 8" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="group relative h-64 md:h-80 lg:h-96 w-full bg-white p-3 border border-gray-300 shadow-lg hover:shadow-2xl hover:border-primary-500 transition-all duration-300">
+                        <a href="./assets/img/0012.jpg" class="glightbox block w-full h-full cursor-zoom-in overflow-hidden relative bg-gray-50">
+                            <img src="./assets/img/0012.jpg" alt="Galeri 8" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-primary-600 text-white pt-20 pb-10 border-t-[6px] border-secondary">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="grid md:grid-cols-4 gap-12 mb-16">
+
+            <div class="col-span-1 md:col-span-2">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-primary-600 font-extrabold text-2xl shadow-lg">
+                        P
+                    </div>
+                    <div>
+                        <h3 class="text-white text-2xl font-bold leading-none">SMK Karnas</h3>
+                        <p class="text-primary-100 text-sm font-medium tracking-wide">Kuningan, Jawa Barat</p>
+                    </div>
+                </div>
+                <p class="text-primary-100 leading-relaxed max-w-sm mb-8 text-lg">
+                    Menjadi lembaga pendidikan profesional yang menghasilkan lulusan <i><b>”Smart, Competent, Religious“</b></i>
+                </p>
+                <div class="flex gap-3">
+                    <a href="#"
+                       class="w-10 h-10 bg-white/10 border border-white/20 rounded-full flex items-center justify-center hover:bg-secondary hover:border-secondary hover:text-white transition duration-300">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                    <a href="#"
+                       class="w-10 h-10 bg-white/10 border border-white/20 rounded-full flex items-center justify-center hover:bg-secondary hover:border-secondary hover:text-white transition duration-300">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                    <a href="#"
+                       class="w-10 h-10 bg-white/10 border border-white/20 rounded-full flex items-center justify-center hover:bg-secondary hover:border-secondary hover:text-white transition duration-300">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-6 text-lg tracking-wide border-b border-primary-500 pb-2 inline-block">Menu Pintas</h4>
+                <ul class="space-y-4 font-medium">
+                    <li>
+                        <a href="#jadwal" class="text-primary-100 hover:text-white hover:translate-x-2 transition-all duration-300 flex items-center gap-2">
+                            <span class="text-secondary text-lg">&bull;</span> Jadwal SPMB
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#jalur" class="text-primary-100 hover:text-white hover:translate-x-2 transition-all duration-300 flex items-center gap-2">
+                            <span class="text-secondary text-lg">&bull;</span> Jalur Pendaftaran
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#alur" class="text-primary-100 hover:text-white hover:translate-x-2 transition-all duration-300 flex items-center gap-2">
+                            <span class="text-secondary text-lg">&bull;</span> Alur & Syarat
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="text-primary-100 hover:text-white hover:translate-x-2 transition-all duration-300 flex items-center gap-2">
+                            <span class="text-secondary text-lg">&bull;</span> Login Siswa
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-6 text-lg tracking-wide border-b border-primary-500 pb-2 inline-block">Hubungi Kami</h4>
+                <ul class="space-y-5 font-medium">
+                    <li class="flex gap-4">
+                        <div class="shrink-0 pt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-secondary">
+                                <path fill-rule="evenodd"
+                                      d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z"
+                                      clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <span class="text-primary-100">Jl. Raya Cirendang - Cigugur, Kuningan 45518</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="shrink-0 pt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-secondary">
+                                <path fill-rule="evenodd"
+                                      d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 4.5z"
+                                      clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <span class="text-primary-100 font-semibold tracking-wide">0232-871404</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="shrink-0 pt-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-secondary">
+                                <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/>
+                                <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/>
+                            </svg>
+                        </div>
+                        <a href="mailto:smkkarnas40@gmail.com" class="text-primary-100 hover:text-white transition decoration-secondary hover:underline underline-offset-4">smkkarnas40@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-primary-500/50 pt-8 flex justify-center items-center text-sm text-primary-200 text-center">
+            <p>&copy; 2025 SMK Karnas Kuningan. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 25,
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+        },
+    });
+
+    const lightbox = GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true,
+        loop: true,
+        autoplayVideos: true
+    });
+</script>
+</body>
+</html>
